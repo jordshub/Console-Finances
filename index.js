@@ -87,3 +87,24 @@ var finances = [
     ['Feb-2017', 671099]
     ];
 
+    // Variables
+
+
+
+    // Number of months
+    
+
+    
+    // Total profit/loss
+    
+
+    
+    // average change accross all months - total/number of months
+    
+
+    
+    // greatest month for profits inc amount
+    
+
+    
+    // greatest month for losses inc amount
