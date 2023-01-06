@@ -1,3 +1,9 @@
+// 2D array, jan 2010 would be 0 0, number would be 1 0
+// row 0 column 0
+// row 1 column 1
+// row 2 column 2
+// Etc
+
 var finances = [
     ['Jan-2010', 867884],
     ['Feb-2010', 984655],
@@ -89,7 +95,11 @@ var finances = [
 
     // Variables
 
-
+let numMonths
+let numTotal
+let changeAvg
+let greatestProfit
+let greatestLoss
 
     // Number of months
     
@@ -105,6 +115,15 @@ var finances = [
     
     // greatest month for profits inc amount
     
+// 2 ROWS 3 COLUMNS
+
+// let array2D = [[1,2,3], [4,5,6]]
+
+// array2D[0]
+// array2D[0][0]
+
+// array2D[1][1]
+
 
     
     // greatest month for losses inc amount
