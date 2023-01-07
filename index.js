@@ -95,26 +95,30 @@ var finances = [
 
     // Variables
 
-let numMonths
-let numTotal
-let changeAvg
+let numTotal = 0
+let changeAvg = 0 
 let greatestProfit
 let greatestLoss
 
     // Number of months
     
-
+console.log("Number of months: " + finances.length)
     
     // Total profit/loss
     
-
-    
+for (let i = 0; i < finances.length; i++) {
+numTotal =+ finances[i][1] 
+}console.log("Total Profit/Loss " + numTotal) 
     // average change accross all months - total/number of months
     
+changeAvg = numTotal / finances.length;
+console.log("average change " + changeAvg);
+    
+    // greatest month for profits inc amount. Sorts by descending order and then returns first value
+    
+    greatestProfit = finances.sort((a,b)=>a[1]-b[1])[0];
+    console.log("Greatest Profit: " + greatestProfit)
 
-    
-    // greatest month for profits inc amount
-    
 // 2 ROWS 3 COLUMNS
 
 // let array2D = [[1,2,3], [4,5,6]]
