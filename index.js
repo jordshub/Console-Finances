@@ -116,7 +116,7 @@ console.log("average change " + changeAvg);
     
     // greatest month for profits inc amount. Sorts by descending order and then returns first value
     
-    greatestProfit = finances.sort((a,b)=>a[1]-b[1])[0];
+    greatestProfit = finances.sort((a,b)=>b[1]-a[1])[0];
     console.log("Greatest Profit: " + greatestProfit)
 
 // 2 ROWS 3 COLUMNS
@@ -127,7 +127,8 @@ console.log("average change " + changeAvg);
 // array2D[0][0]
 
 // array2D[1][1]
-
-
     
     // greatest month for losses inc amount
+
+    greatestLoss = finances.sort((a,b)=>a[1]-b[1])[0];
+    console.log("Greatest Loss: " + greatestLoss)
