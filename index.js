@@ -1,9 +1,3 @@
-// 2D array, jan 2010 would be 0 0, number would be 1 0
-// row 0 column 0
-// row 1 column 1
-// row 2 column 2
-// Etc
-
 var finances = [
     ['Jan-2010', 867884],
     ['Feb-2010', 984655],
@@ -91,44 +85,42 @@ var finances = [
     ['Dec-2016', 60988],
     ['Jan-2017', 138230],
     ['Feb-2017', 671099]
-    ];
+];
 
-    // Variables
+// Variables
 
 let numTotal = 0
-let changeAvg = 0 
+let numRun = 0
+let changeAvg = 0
 let greatestProfit
 let greatestLoss
+let dateReversed
 
-    // Number of months
-    
+// Number of months
+
 console.log("Number of months: " + finances.length)
-    
-    // Total profit/loss
-    
+
+// Total profit/loss
+
 for (let i = 0; i < finances.length; i++) {
-numTotal =+ finances[i][1] 
-}console.log("Total Profit/Loss " + numTotal) 
-    // average change accross all months - total/number of months
-    
-changeAvg = numTotal / finances.length;
-console.log("average change " + changeAvg);
-    
-    // greatest month for profits inc amount. Sorts by descending order and then returns first value
-    
-    greatestProfit = finances.sort((a,b)=>b[1]-a[1])[0];
-    console.log("Greatest Profit: " + greatestProfit)
+    numTotal += finances[i][1];
+} console.log("Total Profit/Loss: " + numTotal)
 
-// 2 ROWS 3 COLUMNS
+// Average change accross all months 
 
-// let array2D = [[1,2,3], [4,5,6]]
+for (let j = 0; j < finances.length; j++) {
+    numRun = finances[j][1];
+}
 
-// array2D[0]
-// array2D[0][0]
+changeAvg = numRun / finances.length;
+console.log("Average change: " + changeAvg.toFixed(0));
 
-// array2D[1][1]
-    
-    // greatest month for losses inc amount
+// Greatest month for profits inc amount. Sorts by descending order and then returns first value.
 
-    greatestLoss = finances.sort((a,b)=>a[1]-b[1])[0];
-    console.log("Greatest Loss: " + greatestLoss)
+greatestProfit = finances.sort((a, b) => b[1] - a[1])[0];
+console.log("Greatest Profit: " + greatestProfit)
+
+// Greatest month for losses inc amount. Sorts by ascending order and then returns first value.
+
+greatestLoss = finances.sort((a, b) => a[1] - b[1])[0];
+console.log("Greatest Loss: " + greatestLoss)
