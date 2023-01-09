@@ -94,9 +94,8 @@ let numRun = 0
 let changeAvg = 0
 let greatestProfit
 let greatestLoss
-let dateReversed
 
-// Number of months
+// // Number of months
 
 console.log("Number of months: " + finances.length)
 
@@ -104,7 +103,7 @@ console.log("Number of months: " + finances.length)
 
 for (let i = 0; i < finances.length; i++) {
     numTotal += finances[i][1];
-} console.log("Total Profit/Loss: " + numTotal)
+} console.log("Total Profit/Loss: $" + numTotal)
 
 // Average change accross all months 
 
@@ -113,14 +112,14 @@ for (let j = 0; j < finances.length; j++) {
 }
 
 changeAvg = numRun / finances.length;
-console.log("Average change: " + changeAvg.toFixed(0));
+console.log("Average change: $" + changeAvg.toFixed(2));
 
 // Greatest month for profits inc amount. Sorts by descending order and then returns first value.
 
-greatestProfit = finances.sort((a, b) => b[1] - a[1])[0];
-console.log("Greatest Profit: " + greatestProfit)
+greatestProfit = finances.sort((a, b) => b[1] - a[1])[0][1];
+console.log("Greatest Profit: " + finances[0][0] + " $" + greatestProfit)
 
 // Greatest month for losses inc amount. Sorts by ascending order and then returns first value.
 
-greatestLoss = finances.sort((a, b) => a[1] - b[1])[0];
-console.log("Greatest Loss: " + greatestLoss)
+greatestLoss = finances.sort((a, b) => a[1] - b[1])[0][1];
+console.log("Greatest Loss: " + finances[0][0] + " $" + greatestLoss)
